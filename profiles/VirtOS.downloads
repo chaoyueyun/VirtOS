@@ -19,5 +19,8 @@
 #
 
 # libvirt
-#libvirt-clients
-#libvirt-daemon-system
+libvirt-clients
+libvirt-daemon-system
+
+# ceph
+ceph

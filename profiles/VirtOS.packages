@@ -21,13 +21,12 @@
 # 基础
 qemu-kvm
 bridge-utils
-libguestfs-tools
+#libguestfs-tools
 virtinst
 libosinfo-bin
 #docker-ce
 
 # 分布式存储
-ceph
 
 # 虚拟网络
 
