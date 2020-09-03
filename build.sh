@@ -38,4 +38,4 @@
 
 
 # Build iso for VirtOS
-build-simple-cdd --conf ./profiles/VirtOS.conf --verbose --dvd
+build-simple-cdd --conf ./config/VirtOS-amd64.conf --verbose --dvd
