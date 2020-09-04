@@ -13,7 +13,7 @@ qemu-utils
 #
 # store
 #
-ceph
+#ceph
 
 #
 # network

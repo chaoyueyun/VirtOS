@@ -13,7 +13,7 @@
 # ......
 
 # Install env for build iso.
-export VIRTOS_BUILD_DIR=~/VirtOS-ISO
+export VIRTOS_BUILD_DIR=~/VirtOS-BUILD
 
 if [ -d $VIRTOS_BUILD_DIR ]; then
   echo "Delete $VIRTOS_BUILD_DIR."
@@ -22,6 +22,8 @@ else
   mkdir -pv $VIRTOS_BUILD_DIR/{profiles,custom-deb,extra-file}
 fi
 cp $(pwd)/profiles/VirtOS.* $VIRTOS_BUILD_DIR/profiles/
+
+if 
 cp $(pwd)/config/VirtOS-amd64.conf $VIRTOS_BUILD_DIR/VirtOS.conf
 
 
