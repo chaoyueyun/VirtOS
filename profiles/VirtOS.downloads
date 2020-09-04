@@ -1,26 +1,7 @@
-# Profile Selection
 #
-# The following four files get included on the CD if present:
-# $profile.preseed  
-#   Debconf selections.
-# $profile.packages  
-#   Packages to be installed with the profile. Dependencies also will 
-#   be installed.
-# $profile.downloads  
-#   Additional packages to be included on the CD with this profile, but 
-#   not installed by default.
-# $profile.postinst  
-#   Post-install script that is run after installing packages.
-#
-# During the install after base system setup, it will give you the 
-# options to determine which profiles you want to install.
-#
-# 只下载到安装盘中，默认不安装
-#
-
 # libvirt
+#
 libvirt-clients
 libvirt-daemon-system
+virtinst
 
-# ceph
-ceph
