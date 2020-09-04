@@ -25,7 +25,6 @@ ceph-mon
 ceph-osd
 cifs-utils
 corosync
-criu
 cryptsetup-bin
 cstream
 curl
@@ -80,7 +79,6 @@ iso-codes
 
 keyutils
 krb5-locales
-ksm-control-daemon
 
 
 libacl1-dev
@@ -261,19 +259,8 @@ libpipeline1
 libpixman-1-0
 libprotobuf-c1
 libprotobuf17
-libproxmox-acme-perl
-libproxmox-backup-qemu0
 libpsl5
 libpulse0
-libpve-access-control
-libpve-apiclient-perl
-libpve-cluster-api-perl
-libpve-cluster-perl
-libpve-common-perl
-libpve-guest-common-perl
-libpve-http-server-perl
-libpve-storage-perl
-libpve-u2f-server-perl
 libpython-stdlib
 libpython2-stdlib
 libpython2.7
@@ -288,7 +275,6 @@ libquadmath0
 libquorum5
 librabbitmq4
 librados2
-librados2-perl
 libradosstriper1
 librbd1
 librdmacm1
@@ -366,7 +352,6 @@ libzpool2linux
 linux-libc-dev
 lsof
 lvm2
-lxc-pve
 lxcfs
 lynx
 lynx-common
@@ -381,7 +366,6 @@ netcat-traditional
 nfs-common
 nmap
 nmap-common
-novnc-pve
 numactl
 
 open-iscsi
@@ -405,7 +389,6 @@ python-asn1crypto
 python-backports.functools-lru-cache
 python-bcrypt
 python-bs4
-python-ceph-argparse
 python-cephfs
 python-certifi
 python-cffi-backend
@@ -475,7 +458,6 @@ python3-urllib3
 python3.7
 python3.7-minimal
 
-qemu-server
 reportbug
 rpcbind
 rrdcached
@@ -486,7 +468,6 @@ samba-libs
 smartmontools
 smbclient
 socat
-spiceterm
 spl
 sqlite3
 ssh
@@ -502,7 +483,6 @@ traceroute
 
 uidmap
 
-vncterm
 wget
 
 x11-common
