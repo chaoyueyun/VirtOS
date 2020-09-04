@@ -22,6 +22,7 @@ else
   mkdir -pv $VIRTOS_BUILD_DIR/{profiles,custom-deb,extra-file}
 fi
 cp $(pwd)/profiles/VirtOS.* $VIRTOS_BUILD_DIR/profiles/
+cp $(pwd)/config/VirtOS-amd64.conf $VIRTOS_BUILD_DIR/VirtOS.conf
 
 
 # Build patch for debian deb
@@ -39,4 +40,6 @@ cp $(pwd)/profiles/VirtOS.* $VIRTOS_BUILD_DIR/profiles/
 
 
 # Build iso for VirtOS
-build-simple-cdd --conf ./config/VirtOS-amd64.conf --verbose --dvd
+cd $VIRTOS_BUILD_DIR
+build-simple-cdd --conf VirtOS.conf --verbose --dvd
+
