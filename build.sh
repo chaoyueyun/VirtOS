@@ -8,30 +8,39 @@
 # See /LICENSE for more information.
 #
 
+Usage() {
+  echo "Help:"
+  echo "-a x86|arm|mips"
+  echo "-h help"
+}
+
 # Arg
-# ......
+#
 while getopts "a:h" opt; do
   case $opt in
     a)
-      echo "this is -a the arg is ! $OPTARG" 
-	  if [ $OPTARG -eq "amd64" || $OPTARG -eq "arm64" || $OPTARG -eq "mips64" ]; then
-		export ARCH = $OPTARG
-	  else
-	    export ARCH = amd64
-	  if
+      if [ "$OPTARG" == "x86" ]; then
+        export ARCH=amd64
+      elif [ "$OPTARG" == "arm" ]; then
+        export ARCH=arm64
+      elif [ "$OPTARG" == "mips" ]; then
+        export ARCH=mips64
+      else
+        echo "Arg is invalid! $OPTARG"
+        exit 1
+      fi
       ;;
-    h)
-      echo "-a amd64|arm64|mips64." 
-	  echo "-d debug" 
-	  echo "-h help" 
-	  exit(1)
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG"
-	  exit(1)
+    *)
+      Usage
+      exit 1
       ;;
   esac
 done
+
+if [ "$ARCH" = "" ]; then
+  Usage
+  exit 1
+fi
 
 # Set ENV
 # ......
@@ -66,4 +75,3 @@ cp $(pwd)/config/VirtOS-$ARCH.conf $VIRTOS_BUILD_DIR/VirtOS.conf
 # Build iso for VirtOS
 cd $VIRTOS_BUILD_DIR
 build-simple-cdd --conf VirtOS.conf --verbose --dvd
-
