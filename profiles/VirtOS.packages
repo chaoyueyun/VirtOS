@@ -9,11 +9,15 @@ qemu
 qemu-kvm
 qemu-system
 qemu-utils
+python
 
 #
 # store
 #
-#ceph
+ceph
+python-openssl
+python-cryptography
+python-cffi-backend
 
 #
 # network
