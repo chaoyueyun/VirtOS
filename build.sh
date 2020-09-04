@@ -8,6 +8,30 @@
 # See /LICENSE for more information.
 #
 
+# Arg
+# ......
+while getopts "a:h" opt; do
+  case $opt in
+    a)
+      echo "this is -a the arg is ! $OPTARG" 
+	  if [ $OPTARG -eq "amd64" || $OPTARG -eq "arm64" || $OPTARG -eq "mips64" ]; then
+		export ARCH = $OPTARG
+	  else
+	    export ARCH = amd64
+	  if
+      ;;
+    h)
+      echo "-a amd64|arm64|mips64." 
+	  echo "-d debug" 
+	  echo "-h help" 
+	  exit(1)
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG"
+	  exit(1)
+      ;;
+  esac
+done
 
 # Set ENV
 # ......
@@ -22,26 +46,7 @@ else
   mkdir -pv $VIRTOS_BUILD_DIR/{profiles,custom-deb,extra-file}
 fi
 cp $(pwd)/profiles/VirtOS.* $VIRTOS_BUILD_DIR/profiles/
-
-while getopts "a:d:h" opt; do
-  case $opt in
-    a)
-      echo "this is -a the arg is ! $OPTARG" 
-      ;;
-    d)
-      echo "this is -b the arg is ! $OPTARG" 
-      ;;
-    h)
-      echo "-a amd64|arm64|mips64." 
-	  echo "-d debug" 
-	  echo "-h help" 
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG" 
-      ;;
-  esac
-done
-cp $(pwd)/config/VirtOS-amd64.conf $VIRTOS_BUILD_DIR/VirtOS.conf
+cp $(pwd)/config/VirtOS-$ARCH.conf $VIRTOS_BUILD_DIR/VirtOS.conf
 
 
 # Build patch for debian deb
