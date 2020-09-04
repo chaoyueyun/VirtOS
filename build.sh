@@ -23,7 +23,24 @@ else
 fi
 cp $(pwd)/profiles/VirtOS.* $VIRTOS_BUILD_DIR/profiles/
 
-if 
+while getopts "a:d:h" opt; do
+  case $opt in
+    a)
+      echo "this is -a the arg is ! $OPTARG" 
+      ;;
+    d)
+      echo "this is -b the arg is ! $OPTARG" 
+      ;;
+    h)
+      echo "-a amd64|arm64|mips64." 
+	  echo "-d debug" 
+	  echo "-h help" 
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" 
+      ;;
+  esac
+done
 cp $(pwd)/config/VirtOS-amd64.conf $VIRTOS_BUILD_DIR/VirtOS.conf
 
 
