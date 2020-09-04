@@ -43,7 +43,9 @@ if [ "$ARCH" = "" ]; then
 fi
 
 # Set ENV
-# ......
+# 
+export DEBVERSION=`cat version`
+export CODENAME=`cat CODENAME`
 
 # Install env for build iso.
 export VIRTOS_BUILD_DIR=~/VirtOS-BUILD
