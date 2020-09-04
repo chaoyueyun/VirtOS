@@ -13,14 +13,15 @@
 # ......
 
 # Install env for build iso.
-#export VIRTOS_BUILD_DIR=~/virtos-iso
+export VIRTOS_BUILD_DIR=~/VirtOS-ISO
 
-#if [ -d $VIRTOS_BUILD_DIR ]; then
-#  echo "Delete $VIRTOS_BUILD_DIR."
-#  #rm -rf $VIRTOS_BUILD_DIR
-#else
-#  # mkdir -pv $VIRTOS_BUILD_DIR/{profiles,custom-deb,extra-file}
-#fi
+if [ -d $VIRTOS_BUILD_DIR ]; then
+  echo "Delete $VIRTOS_BUILD_DIR."
+  #rm -rf $VIRTOS_BUILD_DIR
+else
+  mkdir -pv $VIRTOS_BUILD_DIR/{profiles,custom-deb,extra-file}
+fi
+cp $(pwd)/profiles/VirtOS.* $VIRTOS_BUILD_DIR/profiles/
 
 
 # Build patch for debian deb
