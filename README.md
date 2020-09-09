@@ -24,7 +24,7 @@ Makefile
 ### 编译步骤
 
 1. chmod +x ./build.sh
-2. ./build.sh
+2. ./build.sh -a x86 | arm | mips
 
 ## 版本说明
 
