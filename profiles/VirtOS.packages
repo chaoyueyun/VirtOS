@@ -15,6 +15,7 @@ python
 # store
 #
 ceph
+libgnutls-openssl27
 python-openssl
 python-cryptography
 python-cffi-backend
