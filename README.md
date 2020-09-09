@@ -6,20 +6,9 @@
 
 ### 环境要求
 
-1. Debian10.5，做小化安装
+1. Debian10.5，最小化安装
 2. sudo apt-get git
 3. sudo apt-get install simple-cdd xorriso
-
-### 源码说明
-
-config
-incloude
-package
-scripts
-target
-build.sh
-Config.in
-Makefile
 
 ### 编译步骤
 
@@ -41,7 +30,6 @@ v1.1.0 是 v1.0.0 之后的功能版本。
   - [Debian](https://www.debian.org/) v10.5
   - [Kernel](https://www.kernel.org/)
   - [QEMU]
-  - [docker](https://www.docker.com/) v19.03.9
 
 - 存储
   - [CEPH]
@@ -54,12 +42,9 @@ v1.1.0 是 v1.0.0 之后的功能版本。
 
 
 ### 下载
-- https://virtos.org.cn
 
 
 ### 支持
-微信：18615530227
-邮箱：18615530227@163.com
 
 ## License
 
