@@ -5,23 +5,23 @@ python
 openssh-server
 wget
 
-qemu
+#qemu
 #qemu-kvm
-qemu-system
-qemu-utils
-python
+#qemu-system
+#qemu-utils
+#python
 
 #
 # store
 #
-ceph
-libgnutls-openssl27
-python-openssl
-python-cryptography
-python-cffi-backend
+#ceph
+#libgnutls-openssl27
+#python-openssl
+#python-cryptography
+#python-cffi-backend
 
 #
 # network
 #
-openvswitch-switch
+#openvswitch-switch
 
