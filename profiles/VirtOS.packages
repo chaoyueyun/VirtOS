@@ -6,7 +6,7 @@ openssh-server
 wget
 
 qemu
-qemu-kvm
+#qemu-kvm
 qemu-system
 qemu-utils
 python
